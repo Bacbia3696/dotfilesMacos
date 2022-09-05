@@ -33,6 +33,7 @@
 	i = init
 	ib = init --bare
 	k = checkout
+	kk = checkout .
 	kb = checkout -b
 	kt = checkout -t
 	l = log
