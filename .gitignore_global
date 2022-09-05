@@ -1,0 +1,6 @@
+tags
+node_modules/
+.projections.json
+.air.toml
+.DS_Store
+.vscode

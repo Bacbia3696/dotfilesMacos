@@ -1,0 +1,79 @@
+# This is Git's per-user configuration file.
+#[user]
+#	email = bacbia3696@gmail.com
+#	name = DatNguyen
+#
+[user]
+	email = dat.nguyen1@be.com.vn
+	name = DatNguyen
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+[alias]
+	a = add
+	aa = add -A
+	ae = add -e
+	ai = add -i
+	al = !git config --get-regexp ^alias\\. | sed -e s/^alias.// -e s/\\ /\\ $(printf \"\\043\")--\\>\\ / | column -t -s $(printf \"\\043\") | sort -k 1
+	ap = add -p
+	au = add -u
+	b = branch
+	ba = branch -a
+	c = commit
+	cam = commit -am
+	cfix = commit --amend
+	cl = clone
+	clf = clean -f
+	cln = clean -n
+	cm = commit -m
+	d = diff
+	dh = diff HEAD
+	ds = diff --staged
+	f = fetch
+	i = init
+	ib = init --bare
+	k = checkout
+	kb = checkout -b
+	kt = checkout -t
+	l = log
+	lg = log --graph --oneline --all --decorate
+	lo = log --oneline
+	ls = ls-files
+	m = merge
+	n = init
+	o = show
+	p = push
+	pf = push --force
+	rb = rebase
+	rmc = rm --cached
+	rs = reset
+	rt = restore
+	rv = revert
+	s = status
+	ss = stash
+	u = pull
+	root = !pwd
+    patch = !git --no-pager diff --no-color
+	rebase-last-five = "!b=\"$(git branch --no-color | cut -c3-)\" ; h=\"$(git rev-parse $b)\" ; echo \"Current branch: $b $h\" ; c=\"$(git rev-parse $b~4)\" ; echo \"Recreating $b branch with initial commit $c ...\" ; git checkout --orphan new-start $c ; git commit -C $c ; git rebase --onto new-start $c $b ; git branch -d new-start ; git gc"
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[url "ssh://git@git.begroup.team/"]
+  insteadOf = https://git.begroup.team/
+
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltin = false # required for git 2.37.0
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    plus-style = syntax "#003a00"
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
