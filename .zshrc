@@ -112,34 +112,5 @@ eval "$(starship init zsh)"
 enable-fzf-tab
 source <(kubectl completion zsh) # setup autocomplete in zsh into the current shell
 
-export PATH="$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-
-export CLOUDSDK_PYTHON=/usr/bin/python3
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-
-[[ -s "/Users/dat.nguyen1/.gvm/scripts/gvm" ]] && source "/Users/dat.nguyen1/.gvm/scripts/gvm"
-source $HOME/.cargo/env
-
-# export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
-# export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/openssl@3/include"
-# export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl@3/lib/pkgconfig"
-
-# # LLVM
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-
 # this is for rust
 # export CC=gcc
-
-# fpath+=~/.zfunc
-
-[[ -s "/Users/nguyenthanhdat/.gvm/scripts/gvm" ]] && source "/Users/nguyenthanhdat/.gvm/scripts/gvm"
