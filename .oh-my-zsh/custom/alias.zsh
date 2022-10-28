@@ -17,4 +17,4 @@ alias react="pbpaste > /tmp/file.html && htmltojsx /tmp/file.html | pbcopy"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 alias sdcv="sdcv -2 ~/Library/stardict/dic"
-alias gd='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
