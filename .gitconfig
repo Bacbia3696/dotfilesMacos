@@ -1,12 +1,9 @@
 # This is Git's per-user configuration file.
-#[user]
-#	email = bacbia3696@gmail.com
-#	name = DatNguyen
-#
 [user]
-	email = dat.nguyen1@be.com.vn
+	email = bacbia3696@gmail.com
 	name = DatNguyen
 [core]
+	pager = delta
 	editor = nvim
 	excludesfile = ~/.gitignore_global
 [alias]
@@ -35,7 +32,8 @@
 	k = checkout
 	kk = checkout .
 	kb = checkout -b
-	kt = checkout -t
+	kt = checkout --theirs
+	ko = checkout --ours
 	l = log
 	lg = log --graph --oneline --all --decorate
 	lo = log --oneline
@@ -54,17 +52,12 @@
 	ss = stash
 	u = pull
 	root = !pwd
-    patch = !git --no-pager diff --no-color
-	rebase-last-five = "!b=\"$(git branch --no-color | cut -c3-)\" ; h=\"$(git rev-parse $b)\" ; echo \"Current branch: $b $h\" ; c=\"$(git rev-parse $b~4)\" ; echo \"Recreating $b branch with initial commit $c ...\" ; git checkout --orphan new-start $c ; git commit -C $c ; git rebase --onto new-start $c $b ; git branch -d new-start ; git gc"
+	patch = !git --no-pager diff --no-color
 [pull]
 	rebase = true
 [init]
 	defaultBranch = main
-[url "ssh://git@git.begroup.team/"]
-  insteadOf = https://git.begroup.team/
 
-[core]
-    pager = delta
 [interactive]
     diffFilter = delta --color-only
 [add.interactive]
@@ -75,6 +68,11 @@
     plus-style = syntax "#003a00"
     side-by-side = true
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
+	tool = vimdiff
+[mergetool]
+	keepBackup = false
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [diff]
-    colorMoved = default
+	colorMoved = default

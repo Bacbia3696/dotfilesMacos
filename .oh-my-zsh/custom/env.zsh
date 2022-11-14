@@ -1,7 +1,7 @@
 export PROMPT_EOL_MARK=''
 
 # FZF
-export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs -g '!**/.git/**' -g '!**/node_modules/**'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs -g '!**/.git/**' -g '!**/node_modules/**' -g '!**/target/**'"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_DEFAULT_OPTS="--border"
 
@@ -28,7 +28,7 @@ export COMPOSE_DOCKER_CLI_BUILD=0
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # llvm
-export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
