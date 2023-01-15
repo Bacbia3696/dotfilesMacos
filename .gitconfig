@@ -1,6 +1,6 @@
 # This is Git's per-user configuration file.
 [user]
-	email = bacbia3696@gmail.com
+	email = dat.n@sharering.network
 	name = DatNguyen
 [core]
 	pager = delta
@@ -76,3 +76,6 @@
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
 [diff]
 	colorMoved = default
+
+[url "ssh://git@bitbucket.org/"]
+	insteadOf = https://bitbucket.org/
