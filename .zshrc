@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+# eval "$(oh-my-posh init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 enable-fzf-tab
 source <(kubectl completion zsh) # setup autocomplete in zsh into the current shell

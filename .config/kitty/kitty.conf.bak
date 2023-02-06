@@ -24,7 +24,7 @@ bold_italic_font Operator Mono Lig Medium Italic
 #:     italic_font      Operator Mono Book Italic
 #:     bold_italic_font Operator Mono Medium Italic
 
-font_size 16.0
+font_size 15.0
 
 #: Font size (in pts)
 
@@ -640,7 +640,7 @@ initial_window_height 400
 #: suffix of "c" on the width/height values to have them interpreted
 #: as number of cells instead of pixels.
 
-enabled_layouts fat,tall,splits,grid
+enabled_layouts tall,fat,splits,grid
 
 #: The enabled window layouts. A comma separated list of layout names.
 #: The special value all means all layouts. The first listed layout
@@ -842,7 +842,7 @@ tab_bar_style slant
 #:     action which presents you with a list of tabs and allows for easy
 #:     switching to a tab.
 
-tab_bar_align left
+tab_bar_align center
 
 #: The horizontal alignment of the tab bar, can be one of: left,
 #: center, or right.
@@ -938,7 +938,7 @@ inactive_tab_font_style normal
 
 #: The foreground and background colors
 
-background_opacity .9
+background_opacity 1
 
 #: The opacity of the background. A number between 0 and 1, where 1 is
 #: opaque and 0 is fully transparent.  This will only work if
@@ -1624,11 +1624,13 @@ map shift+cmd+d close_window
 #: Next window
 
 map kitty_mod+] next_window
+map cmd+] next_window
 map cmd+k next_window
 
 #: Previous window
 
 map kitty_mod+[ previous_window
+map cmd+[ previous_window
 map cmd+j previous_window
 
 #: Move window forward
@@ -2045,6 +2047,6 @@ map opt+cmd+,    debug_config
 #: 
 
 # BEGIN_KITTY_THEME
-# Custom Theme
+# Atelier Sulphurpool
 include current-theme.conf
 # END_KITTY_THEME
