@@ -115,3 +115,7 @@ source <(kubectl completion zsh) # setup autocomplete in zsh into the current sh
 
 # this is for rust
 # export CC=gcc
+
+# fnm
+export PATH="/Users/nguyenthanhdat/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
