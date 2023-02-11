@@ -1,22 +1,35 @@
 export PROMPT_EOL_MARK=''
 
 # FZF
-export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs -g '!**/.git/**' -g '!**/node_modules/**' -g '!**/target/**'"
+export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-export FZF_DEFAULT_OPTS="--border"
+export FZF_CTRL_T_OPTS="
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+export FZF_DEFAULT_OPTS="--reverse --height 60% --cycle --border \
+  --color='info:cyan,border:magenta,gutter:-1'"
 
 # LESS
 export LESS='-SRXF'
 
 # EDITOR
-export EDITOR=nvim
-export VISUAL=nvim
+export VISUAL="nvim -u NONE -c 'nnoremap <C-S> <cmd>up<cr> '\
+  -c ' nnoremap <C-Q> <cmd>quit<cr>' -c 'nnoremap ; :'"
+export EDITOR="$VISUAL"
 
 # golang
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 # gvm
-[[ -s "/Users/nguyenthanhdat/.gvm/scripts/gvm" ]] && source "/Users/nguyenthanhdat/.gvm/scripts/gvm"
+[[ -s "/Users/nguyenthanhdat/.gvm/scripts/gvm" ]] && \
+  source "/Users/nguyenthanhdat/.gvm/scripts/gvm"
 
 # rust
 source $HOME/.cargo/env

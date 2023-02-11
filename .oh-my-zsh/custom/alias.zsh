@@ -8,13 +8,11 @@ alias k=kubectl
 alias i=ignite
 alias c=cargo
 alias g=git
+alias e=nvim
 
 # edit config file
 alias egf="e $HOME/.gitconfig"
 alias ekf="e $HOME/.config/kitty/kitty.conf"
 
-alias react="pbpaste > /tmp/file.html && htmltojsx /tmp/file.html | pbcopy"
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
 alias sdcv="sdcv -2 ~/Library/stardict/dic"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias gd='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

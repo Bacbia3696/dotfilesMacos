@@ -540,33 +540,6 @@ let-env config = {
             | each { |it| {value: $it.name description: $it.usage} }
         }
       }
-      {
-          name: fzf_menu
-          only_buffer_difference: false
-          marker: "# "
-          type: {
-              layout: columnar
-              columns: 1
-              col_width: 20
-              col_padding: 2
-          }
-          style: {
-              text: green
-              selected_text: green_reverse
-              description_text: yellow
-          }
-          source: { |buffer, position|
-              let input = (fzf --preview 'bat -n --color=always {}'  | lines)
-              let start = ($buffer | str index-of ' ') + 1
-              $input
-              | each { |v| 
-                  {
-                      value: ($v | str trim) 
-                      span: { start: $start end: $position }
-                  } 
-              }
-          }
-      }
   ]
   keybindings: [
     {
@@ -683,7 +656,7 @@ let-env config = {
               | uniq
               | reverse
               | str join (char -i 0)
-              | fzf --read0 --layout=reverse -q (commandline)
+              | fzf --read0 -q (commandline)
               | decode utf-8
               | str trim
           )"
@@ -691,11 +664,18 @@ let-env config = {
       ]
     }
     {
-      name: fzf_menu
+      name: fzf_list_files
       modifier: control
       keycode: char_t
       mode: [emacs, vi_normal, vi_insert]
-      event: { send: menu name: fzf_menu }
+      event: [
+        {
+          send: ExecuteHostCommand
+          cmd: "commandline --append (
+            fzf --preview 'bat -n --color=always {}'
+          )"
+        }
+      ]
     }
   ]
 }

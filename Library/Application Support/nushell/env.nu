@@ -70,11 +70,11 @@ $"($env.HOME)/.cargo/bin",
 
 let-env PYENV_ROOT = "$env.HOME/.pyenv"
 let-env VISUAL = "/opt/homebrew/bin/nvim"
-let-env FZF_DEFAULT_OPTS = "--height 60% --reverse --cycle --border --color='info:cyan,border:magenta,gutter:-1'"
+let-env FZF_DEFAULT_OPTS = "--reverse --height 60% --cycle --border --color='info:cyan,border:magenta,gutter:-1'"
 let-env FZF_DEFAULT_COMMAND = "fd --type f"
 
 zoxide init nushell | save -f ~/.zoxide.nu
-oh-my-posh init nu --config /opt/homebrew/Cellar/oh-my-posh/14.0.3/themes/craver.omp.json
+oh-my-posh init nu --config /opt/homebrew/Cellar/oh-my-posh/14.0.3/themes/emodipt-extend.omp.json
 # starship init nu | save -f ~/.cache/starship/init.nu
 
 # setup fnm: node version manager writen in Rust
