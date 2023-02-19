@@ -1,4 +1,5 @@
 export PROMPT_EOL_MARK=''
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # FZF
 export FZF_DEFAULT_COMMAND="fd --type f"
@@ -20,8 +21,8 @@ export FZF_DEFAULT_OPTS="--reverse --height 60% --cycle --border \
 export LESS='-SRXF'
 
 # EDITOR
-export VISUAL="nvim -u NONE -c 'nnoremap <C-S> <cmd>up<cr> '\
-  -c ' nnoremap <C-Q> <cmd>quit<cr>' -c 'nnoremap ; :'"
+export VISUAL="nvim\
+  -c 'NvimTreeToggle'"
 export EDITOR="$VISUAL"
 
 # golang
@@ -55,5 +56,5 @@ eval "$(pyenv virtualenv-init -)"
 # for brew
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
-# for fnm
+# replace for nvim
 eval "$(fnm env --use-on-cd)"
