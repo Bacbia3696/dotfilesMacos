@@ -1,19 +1,15 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-battery_details=(
-	background.corner_radius=12
-	background.padding_left=5
-	background.padding_right=10
-	icon.background.height=2
-	icon.background.y_offset=-12
+battery=(
+  script="$PLUGIN_DIR/battery.sh"
+  icon.font="$FONT:Regular:19.0"
+  padding_right=5
+  padding_left=0
+  label.drawing=off
+  update_freq=120
+  updates=on
 )
 
-sketchybar -m --add item    battery right 		                               \
-              --set battery update_freq=1 			                             \
-                            script="$PLUGIN_DIR/battery.sh" 	               \
-              --subscribe   battery           mouse.entered                  \
-                                              mouse.exited                   \
-                                              mouse.exited.global            \
-                                                                             \
-              --add         item              battery.details popup.battery  \
-              --set         battery.details   "${battery_details[@]}"                                
+sketchybar --add item battery right      \
+           --set battery "${battery[@]}" \
+           --subscribe battery power_source_change system_woke
