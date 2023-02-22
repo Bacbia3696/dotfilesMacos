@@ -21,7 +21,11 @@ wezterm.on("update-right-status", utils.update_right_status)
 return {
     keys = keys,
     adjust_window_size_when_changing_font_size = false,
-    font = wezterm.font_with_fallback({ "Operator Mono SSm Lig", "SF Pro" }),
+    font = wezterm.font_with_fallback({
+        "Operator Mono SSm Lig",
+        "SF Pro",
+        "Apple Color Emoji",
+    }),
     bold_brightens_ansi_colors = true,
     font_rules = {
         {
@@ -47,7 +51,7 @@ return {
     window_padding = { left = 5, right = 5, top = 5, bottom = 5 },
     initial_cols = 110,
     initial_rows = 25,
-    inactive_pane_hsb = { saturation = 1.0, brightness = 0.85 },
+    inactive_pane_hsb = { saturation = 1.0, brightness = 0.80 },
     enable_scroll_bar = true,
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
