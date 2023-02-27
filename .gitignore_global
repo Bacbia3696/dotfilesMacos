@@ -4,3 +4,4 @@ node_modules/
 .air.toml
 .DS_Store
 .vscode
+coverage.out

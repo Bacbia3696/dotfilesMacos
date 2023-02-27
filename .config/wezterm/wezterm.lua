@@ -56,7 +56,7 @@ return {
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
     show_new_tab_button_in_tab_bar = false,
-    window_background_opacity = 0.9,
+    window_background_opacity = 0.85,
     tab_max_width = 50,
     hide_tab_bar_if_only_one_tab = true,
     disable_default_key_bindings = false,
