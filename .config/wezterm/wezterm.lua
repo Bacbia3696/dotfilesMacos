@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
-local colors = require('colors')
 local utils = require('utils')
 local keys = require('keys')
+local theme = require("theme")
 
 wezterm.on("ActivatePaneDirection-right", function(window, pane)
     utils.conditional_activate_pane(window, pane, "Right", "l")
@@ -17,6 +17,8 @@ wezterm.on("ActivatePaneDirection-down", function(window, pane)
 end)
 wezterm.on("format-tab-title", utils.format_tab_title)
 wezterm.on("update-right-status", utils.update_right_status)
+
+local dimmer = { brightness = 0.07 }
 
 return {
     keys = keys,
@@ -37,6 +39,77 @@ return {
             font = wezterm.font { family = "Operator Mono SSm Lig", weight = 400 },
         },
     },
+    enable_scroll_bar = true,
+    min_scroll_bar_height = '2cell',
+    background = {
+        -- This is the deepest/back-most layer. It will be rendered first
+        {
+            source = { File = './Backgrounds/spaceship_bg_1.png' },
+            -- The texture tiles vertically but not horizontally.
+            -- When we repeat it, mirror it so that it appears "more seamless".
+            -- An alternative to this is to set `width = "100%"` and have
+            -- it stretch across the display
+            repeat_x = 'Mirror',
+            hsb = dimmer,
+            -- When the viewport scrolls, move this layer 10% of the number of
+            -- pixels moved by the main viewport. This makes it appear to be
+            -- further behind the text.
+            attachment = { Parallax = 0.1 },
+        },
+        -- Subsequent layers are rendered over the top of each other
+        {
+            source = {
+                File = '/Users/nguyenthanhdat/.config/wezterm/Backgrounds/spaceship_bg_1.png',
+            },
+            width = '100%',
+            repeat_x = 'NoRepeat',
+
+            -- position the spins starting at the bottom, and repeating every
+            -- two screens.
+            vertical_align = 'Bottom',
+            repeat_y_size = '200%',
+            hsb = dimmer,
+
+            -- The parallax factor is higher than the background layer, so this
+            -- one will appear to be closer when we scroll
+            attachment = { Parallax = 0.2 },
+        },
+        {
+            source = {
+                File = '/Users/nguyenthanhdat/.config/wezterm/Overlays/overlay_2_alienball.png',
+            },
+            width = '100%',
+            repeat_x = 'NoRepeat',
+
+            -- start at 10% of the screen and repeat every 2 screens
+            vertical_offset = '10%',
+            repeat_y_size = '200%',
+            hsb = dimmer,
+            attachment = { Parallax = 0.3 },
+        },
+        {
+            source = { File = './Overlays/overlay_3_lobster.png' },
+            width = '100%',
+            repeat_x = 'NoRepeat',
+
+            vertical_offset = '30%',
+            repeat_y_size = '200%',
+            hsb = dimmer,
+            attachment = { Parallax = 0.4 },
+        },
+        {
+            source = {
+                File = '/Users/nguyenthanhdat/.config/wezterm/Overlays/overlay_4_spiderlegs.png',
+            },
+            width = '100%',
+            repeat_x = 'NoRepeat',
+
+            vertical_offset = '50%',
+            repeat_y_size = '150%',
+            hsb = dimmer,
+            attachment = { Parallax = 0.5 },
+        },
+    },
     font_size = 14,
     enable_wayland = false,
     pane_focus_follows_mouse = false,
@@ -52,70 +125,15 @@ return {
     initial_cols = 110,
     initial_rows = 25,
     inactive_pane_hsb = { saturation = 1.0, brightness = 0.80 },
-    enable_scroll_bar = true,
     tab_bar_at_bottom = true,
     use_fancy_tab_bar = false,
     show_new_tab_button_in_tab_bar = false,
-    window_background_opacity = 0.85,
+    window_background_opacity = 1,
     tab_max_width = 50,
     hide_tab_bar_if_only_one_tab = true,
     disable_default_key_bindings = false,
     default_cursor_style = 'BlinkingBar',
-    colors = {
-        split = colors.surface0,
-        foreground = colors.text,
-        background = colors.base,
-        cursor_bg = colors.rosewater,
-        cursor_border = colors.rosewater,
-        cursor_fg = colors.base,
-        selection_bg = colors.surface2,
-        selection_fg = colors.text,
-        visual_bell = colors.surface0,
-        indexed = { [16] = colors.peach,[17] = colors.rosewater },
-        scrollbar_thumb = colors.surface2,
-        compose_cursor = colors.flamingo,
-        ansi = {
-            colors.surface1,
-            colors.red,
-            colors.green,
-            colors.yellow,
-            colors.blue,
-            colors.pink,
-            colors.teal,
-            colors.subtext0,
-        },
-        brights = {
-            colors.subtext0,
-            colors.red,
-            colors.green,
-            colors.yellow,
-            colors.blue,
-            colors.pink,
-            colors.teal,
-            colors.surface1,
-        },
-        tab_bar = {
-            background = colors.crust,
-            active_tab = {
-                bg_color = "none",
-                fg_color = colors.subtext1,
-                intensity = "Bold",
-                underline = "None",
-                italic = false,
-                strikethrough = false,
-            },
-            inactive_tab = { bg_color = colors.crust, fg_color = colors.surface2 },
-            inactive_tab_hover = {
-                bg_color = colors.mantle,
-                fg_color = colors.subtext0,
-            },
-            new_tab = { bg_color = colors.crust, fg_color = colors.subtext0 },
-            new_tab_hover = {
-                bg_color = colors.crust,
-                fg_color = colors.subtext0,
-            },
-        },
-    },
+    colors = theme,
     hyperlink_rules = {
         { regex = "\\b\\w+://[\\w.-]+:[0-9]{2,15}\\S*\\b",      format = "$0" },
         { regex = "\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b",    format = "$0" },
