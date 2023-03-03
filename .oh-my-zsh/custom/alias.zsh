@@ -10,6 +10,8 @@ alias c=cargo
 alias g=git
 alias e=nvim
 alias ef="nvim -c 'Telescope find_files'"
+alias bathelp="bat -p -l help"
+alias p=pnpm
 
 # edit config file
 alias egf="e $HOME/.gitconfig"

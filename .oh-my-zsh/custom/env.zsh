@@ -58,3 +58,6 @@ export HOMEBREW_NO_INSTALL_FROM_API=1
 
 # replace for nvim
 eval "$(fnm env --use-on-cd)"
+
+# Bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
