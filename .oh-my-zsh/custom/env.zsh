@@ -12,6 +12,7 @@ export FZF_CTRL_R_OPTS="
   --bind 'ctrl-/:toggle-preview'
   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
   --color header:italic
+  --layout default
   --header 'Press CTRL-Y to copy command into clipboard'"
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 export FZF_DEFAULT_OPTS="--reverse --height 60% --cycle --border \
@@ -56,8 +57,8 @@ eval "$(pyenv virtualenv-init -)"
 # for brew
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
-# replace for nvim
+# replace for nvm
 eval "$(fnm env --use-on-cd)"
 
-# Bat
+# bat to show manpage
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
