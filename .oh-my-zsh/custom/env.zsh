@@ -22,9 +22,8 @@ export FZF_DEFAULT_OPTS="--reverse --height 60% --cycle --border \
 export LESS='-SRXF'
 
 # EDITOR
-export VISUAL="nvim\
-  -c 'NvimTreeToggle'"
-export EDITOR="$VISUAL"
+export VISUAL=nvim
+export EDITOR=$VISUAL
 
 # golang
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
