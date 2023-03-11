@@ -29,8 +29,8 @@ export EDITOR=$VISUAL
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 # gvm
-[[ -s "/Users/nguyenthanhdat/.gvm/scripts/gvm" ]] && \
-  source "/Users/nguyenthanhdat/.gvm/scripts/gvm"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && \
+  source "$HOME/.gvm/scripts/gvm"
 
 # rust
 source $HOME/.cargo/env
@@ -56,8 +56,14 @@ eval "$(pyenv virtualenv-init -)"
 # for brew
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
-# replace for nvm
-eval "$(fnm env --use-on-cd)"
-
 # bat to show manpage
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# fnm is nvm writen in Rust
+export PATH="$HOME/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

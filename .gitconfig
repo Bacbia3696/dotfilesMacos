@@ -6,6 +6,7 @@
 	pager = delta
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+	hooksPath = /Users/nguyenthanhdat/.commitlint/hooks
 [alias]
 	a = add
 	aa = add -A

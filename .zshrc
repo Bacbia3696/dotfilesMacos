@@ -115,27 +115,15 @@ source <(kubectl completion zsh) # setup autocomplete in zsh into the current sh
 # this is for rust
 # export CC=gcc
 
-# fnm is nvm writen in Rust
-export PATH="/Users/nguyenthanhdat/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
-
-# pnpm
-export PNPM_HOME="/Users/nguyenthanhdat/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-
-# config fzf-tab
+# custom completing config
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
 zstyle ':completion:*:descriptions' format '[%d]'
 # set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# preview directory's content with exa when completing cd
-# zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd --tree --depth 1  $realpath --color always'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'lsd -lha  $realpath --color always'
-zstyle ':fzf-tab:complete:nvim:*' fzf-preview '([[ -d $realpath ]] && tree -C $realpath) || bat $realpath --color always'
+# preview directory's content with tree or file with bat
+zstyle ':fzf-tab:complete:(nvim|cp|mv|cd):*' fzf-preview '([[ -d $realpath ]] && tree -C $realpath) || bat $realpath --color always'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' fzf-min-height 20
