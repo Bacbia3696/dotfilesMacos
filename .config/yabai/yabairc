@@ -55,7 +55,7 @@ yabai -m rule --add app="^Parallels." --space 7
 # Config rules
 yabai -m config external_bar all:39:0 \
 	window_border off \
-	mouse_follows_focus off \
+	mouse_follows_focus on \
 	focus_follows_mouse autofocus \
 	window_placement second_child \
 	window_topmost off \

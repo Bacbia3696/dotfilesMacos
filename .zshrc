@@ -127,3 +127,25 @@ zstyle ':fzf-tab:complete:(nvim|cp|mv|cd):*' fzf-preview '([[ -d $realpath ]] &&
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' fzf-min-height 20
+
+#nnn
+export NNN_PLUG='l:launcher'
+
+source ~/fzf-git.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/nguyenthanhdat/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/nguyenthanhdat/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/nguyenthanhdat/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/nguyenthanhdat/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

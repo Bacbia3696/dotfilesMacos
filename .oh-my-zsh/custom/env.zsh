@@ -37,8 +37,8 @@ source $HOME/.cargo/env
 export RUSTC_WRAPPER=sccache
 
 # DOCKER
-export DOCKER_BUILDKIT=0
-export COMPOSE_DOCKER_CLI_BUILD=0
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # llvm
@@ -55,6 +55,8 @@ eval "$(pyenv virtualenv-init -)"
 
 # for brew
 export HOMEBREW_NO_INSTALL_FROM_API=1
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+export CPATH="$CPATH:$(brew --prefix)/include"
 
 # bat to show manpage
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

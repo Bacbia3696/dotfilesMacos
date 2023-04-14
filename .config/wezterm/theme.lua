@@ -9,7 +9,7 @@ return {
 	selection_bg = colors.surface2,
 	selection_fg = colors.text,
 	visual_bell = colors.surface0,
-	indexed = { [16] = colors.peach, [17] = colors.rosewater },
+	indexed = { [16] = "#454545", [17] = colors.rosewater },
 	scrollbar_thumb = colors.surface2,
 	compose_cursor = colors.flamingo,
 	ansi = {
