@@ -202,7 +202,8 @@ shell:
 #     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
 key_bindings:
   # custom tmux keybindings
-  - { key: K, mods: Command, chars: "\x01\x6e" }
-  - { key: J, mods: Command, chars: "\x01\x70" }
-  - { key: T, mods: Command, chars: "\x01\x63" }
-  - { key: N, mods: Command, chars: "\x01\x54" } # open t - tmux smart session manager
+  - { key: K, mods: Command, chars: "\x00\x6e" }
+  - { key: J, mods: Command, chars: "\x00\x70" }
+  - { key: T, mods: Command, chars: "\x00\x63" }
+  - { key: N, mods: Command, chars: "\x00\x54" } # open t - tmux smart session manager
+  - { key: L, mods: Command, chars: "\x00\x4c" } # open t - tmux smart session manager
