@@ -9,6 +9,7 @@ alias i=ignite
 alias c=cargo
 alias g=git
 alias e=nvim
+alias cl=clear
 alias p=pnpm
 alias px=pnpx
 alias ef="nvim -c 'Telescope find_files'"

@@ -44,10 +44,10 @@ cmd + ctrl - right : yabai -m space --focus next
 # cmd + ctrl - 8 : yabai -m space --focus 8 
 
 # Window Navigation (through display borders): 
-lalt - h    : yabai -m window --focus west  || yabai -m display --focus west
-lalt - j    : yabai -m window --focus south || yabai -m display --focus south
-lalt - k    : yabai -m window --focus north || yabai -m display --focus north
-lalt - l    : yabai -m window --focus east  || yabai -m display --focus east
+ralt - h    : yabai -m window --focus west  || yabai -m display --focus west
+ralt - j    : yabai -m window --focus south || yabai -m display --focus south
+ralt - k    : yabai -m window --focus north || yabai -m display --focus north
+ralt - l    : yabai -m window --focus east  || yabai -m display --focus east
 
 ## Window Movement (shift + lalt - ...)
 # Moving windows in spaces:

@@ -15,7 +15,7 @@ return {
 	lavender = "#B7BDF8",
 	text = "#CAD3F5",
 	subtext1 = "#B8C0E0",
-	subtext0 = "#A5ADCB",
+	subtext0 = "#5B6078",
 	overlay2 = "#939AB7",
 	overlay1 = "#8087A2",
 	overlay0 = "#6E738D",

@@ -42,9 +42,9 @@ export COMPOSE_DOCKER_CLI_BUILD=1
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # llvm
-# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 #pyenv
 export PATH="$HOME/.pyenv/bin:$HOME/.pyenv/shims:$PATH"
@@ -69,3 +69,10 @@ eval "`fnm env`"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+
+# https://github.com/joshmedeski/t-smart-tmux-session-manager
+# ~/.tmux/plugins
+export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+# ~/.config/tmux/plugins
+export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
