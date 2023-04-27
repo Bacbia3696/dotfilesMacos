@@ -30,7 +30,7 @@ window:
     y: 2
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   dynamic_title: true
 
@@ -57,18 +57,18 @@ scrolling:
 font:
   # The normal (roman) font face to use.
   normal:
-    family: FiraCode Nerd Font
-    style: Regular
+    family: MonoLisa Nerd Font
+    # style: Book
 
     # The bold font face
   bold:
-    family: FiraCode Nerd Font
-    style: Medium
+    family: MonoLisa Nerd Font
+    # style: bold
 
     # The italic font face
   italic:
-    family: FiraCode Nerd Font
-    style: Italic
+    family: MonoLisa Nerd Font
+    # style: Book Italic
 
     # Point size of the font
   size: 13.0
@@ -206,4 +206,5 @@ key_bindings:
   - { key: J, mods: Command, chars: "\x00\x70" }
   - { key: T, mods: Command, chars: "\x00\x63" }
   - { key: N, mods: Command, chars: "\x00\x54" } # open t - tmux smart session manager
-  - { key: L, mods: Command, chars: "\x00\x4c" } # open t - tmux smart session manager
+  - { key: L, mods: Command, chars: "\x00\x4c" }
+  - { key: Semicolon, mods: Command, chars: "\x00\x3a" }
