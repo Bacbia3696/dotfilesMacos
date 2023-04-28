@@ -128,9 +128,6 @@ zstyle ':fzf-tab:complete:(nvim|cp|mv|cd):*' fzf-preview '([[ -d $realpath ]] &&
 zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' fzf-min-height 20
 
-#nnn
-export NNN_PLUG='l:launcher'
-
 source ~/fzf-git.sh
 
 # >>> conda initialize >>>
