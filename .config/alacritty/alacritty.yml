@@ -121,6 +121,11 @@ hints:
       binding:
         key: U
         mods: Control|Shift
+    - regex: "[a-f0-9]{40}|[a-f0-9]{12}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
+      action: paste
+      binding:
+        key: I
+        mods: Control|Shift
 
 selection:
   semantic_escape_chars: ',│`|:"'' ()[]{}<>'
@@ -212,3 +217,7 @@ key_bindings:
   - { key: N, mods: Command, chars: "\x00\x54" } # open t - tmux smart session manager
   - { key: L, mods: Command, chars: "\x00\x4c" }
   - { key: Semicolon, mods: Command, chars: "\x00\x3a" }
+  - { key: W, mods: Command, chars: "\x00\x26" }
+
+  # Command-S --> M-o == format and save
+  - { key: S, mods: Command, chars: "\x1b\x6f" }
