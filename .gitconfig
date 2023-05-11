@@ -2,6 +2,7 @@
 [user]
 	email = dat.n@sharering.network
 	name = DatNguyen
+	signingkey = 47BCF80E6276EFAA
 [core]
 	pager = delta
 	editor = nvim
@@ -80,3 +81,5 @@
 
 [url "ssh://git@bitbucket.org/"]
 	insteadOf = https://bitbucket.org/
+[commit]
+	gpgsign = true

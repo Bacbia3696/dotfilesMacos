@@ -72,7 +72,7 @@ font:
     # The italic font face
   italic:
     family: MonoLisa Nerd Font
-    # style: Book Italic
+    style: Book Italic
 
     # Point size of the font
   size: 13.0
@@ -122,7 +122,8 @@ hints:
         key: U
         mods: Control|Shift
     - regex: "[a-f0-9]{40}|[a-f0-9]{12}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
-      action: paste
+      action: copy
+      post_processing: true
       binding:
         key: I
         mods: Control|Shift
