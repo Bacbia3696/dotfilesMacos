@@ -37,9 +37,9 @@ source $HOME/.cargo/env
 export RUSTC_WRAPPER=sccache
 
 # DOCKER
-export DOCKER_BUILDKIT=1
-export COMPOSE_DOCKER_CLI_BUILD=1
-export DOCKER_DEFAULT_PLATFORM=linux/amd64
+# export DOCKER_BUILDKIT=1
+# export COMPOSE_DOCKER_CLI_BUILD=1
+# export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # llvm
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

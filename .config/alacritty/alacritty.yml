@@ -39,7 +39,7 @@ window:
   dynamic_title: true
 
   # Background opacity
-  opacity: 1.0
+  opacity: 0.7
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
@@ -75,7 +75,7 @@ font:
     style: Book Italic
 
     # Point size of the font
-  size: 13.0
+  size: 13.5
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
