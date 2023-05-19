@@ -44,17 +44,17 @@ cmd + ctrl - right : yabai -m space --focus next
 # cmd + ctrl - 8 : yabai -m space --focus 8 
 
 # Window Navigation (through display borders): 
-ralt - h    : yabai -m window --focus west  || yabai -m display --focus west
-ralt - j    : yabai -m window --focus south || yabai -m display --focus south
-ralt - k    : yabai -m window --focus north || yabai -m display --focus north
-ralt - l    : yabai -m window --focus east  || yabai -m display --focus east
+shift + lalt - h    : yabai -m window --focus west  || yabai -m display --focus west
+shift + lalt - j    : yabai -m window --focus south || yabai -m display --focus south
+shift + lalt - k    : yabai -m window --focus north || yabai -m display --focus north
+shift + lalt - l    : yabai -m window --focus east  || yabai -m display --focus east
 
 ## Window Movement (shift + lalt - ...)
 # Moving windows in spaces:
-shift + lalt - h : yabai -m window --warp west || $(yabai -m window --display west && sketchybar --trigger windows_on_spaces && yabai -m display --focus west && yabai -m window --warp last) || yabai -m window --move rel:-10:0
-shift + lalt - j : yabai -m window --warp south || $(yabai -m window --display south && sketchybar --trigger windows_on_spaces && yabai -m display --focus south) || yabai -m window --move rel:0:10
-shift + lalt - k : yabai -m window --warp north || $(yabai -m window --display north && sketchybar --trigger windows_on_spaces && yabai -m display --focus north) || yabai -m window --move rel:0:-10
-shift + lalt - l : yabai -m window --warp east || $(yabai -m window --display east && sketchybar --trigger windows_on_spaces && yabai -m display --focus east && yabai -m window --warp first) || yabai -m window --move rel:10:0
+shift + ctrl - h : yabai -m window --warp west || $(yabai -m window --display west && sketchybar --trigger windows_on_spaces && yabai -m display --focus west && yabai -m window --warp last) || yabai -m window --move rel:-10:0
+shift + ctrl - j : yabai -m window --warp south || $(yabai -m window --display south && sketchybar --trigger windows_on_spaces && yabai -m display --focus south) || yabai -m window --move rel:0:10
+shift + ctrl - k : yabai -m window --warp north || $(yabai -m window --display north && sketchybar --trigger windows_on_spaces && yabai -m display --focus north) || yabai -m window --move rel:0:-10
+shift + ctrl - l : yabai -m window --warp east || $(yabai -m window --display east && sketchybar --trigger windows_on_spaces && yabai -m display --focus east && yabai -m window --warp first) || yabai -m window --move rel:10:0
 
 # Moving windows between spaces: shift + lalt 
 shift + lalt - 1 : yabai -m window --space 1;\
@@ -82,10 +82,10 @@ shift + lalt - y : yabai -m space --mirror y-axis
 
 ## Stacks (shift + ctrl - ...)
 # Add the active window to the window or stack to the {direction}: shift + ctrl - {j, k, l, ö}
-shift + ctrl - h    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
-shift + ctrl - j    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
-shift + ctrl - k    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
-shift + ctrl - l    : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+# shift + ctrl - h    : yabai -m window  west --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+# shift + ctrl - j    : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+# shift + ctrl - k    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
+# shift + ctrl - l    : yabai -m window  east --stack $(yabai -m query --windows --window | jq -r '.id'); sketchybar --trigger window_focus
 
 # Stack Navigation: shift + ctrl - {n, p}
 shift + ctrl - n : yabai -m window --focus stack.next
