@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/themes/themes/tokyo-night.yaml
+  - ~/.config/alacritty/themes/themes/tokyo-night-storm.yaml
 
 colors:
   bright:
@@ -56,8 +56,8 @@ scrolling:
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   multiplier: 3
-
 # Font configuration (changes require restart)
+
 font:
   # The normal (roman) font face to use.
   normal:
@@ -70,7 +70,7 @@ font:
   italic:
     style: Light Italic
     # Point size of the font
-  size: 13.5
+  size: 14
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.

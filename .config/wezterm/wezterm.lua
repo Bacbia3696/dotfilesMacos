@@ -23,7 +23,7 @@ return {
 	keys = keys,
 	adjust_window_size_when_changing_font_size = false,
 	font = wezterm.font_with_fallback({
-		{ family = "Victor Mono", weight = "Medium" },
+		{ family = "MonoLisa", weight = "Medium" },
 		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 		"Apple Color Emoji",
 	}),
@@ -37,8 +37,8 @@ return {
 	warn_about_missing_glyphs = false,
 	show_update_window = false,
 	check_for_updates = false,
-	line_height = 1.15,
-	cell_width = 1,
+	line_height = 1.1,
+	cell_width = 0.85,
 	window_decorations = "RESIZE",
 	window_close_confirmation = "NeverPrompt",
 	audible_bell = "Disabled",
@@ -52,7 +52,7 @@ return {
 	window_background_opacity = 0.7,
 	tab_max_width = 50,
 	hide_tab_bar_if_only_one_tab = true,
-	disable_default_key_bindings = true,
+	disable_default_key_bindings = false,
 	default_cursor_style = "BlinkingBar",
 	colors = theme,
 	hyperlink_rules = {
