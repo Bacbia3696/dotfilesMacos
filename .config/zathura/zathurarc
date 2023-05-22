@@ -5,7 +5,7 @@ map p print
 map i recolor
 map J zoom out
 map K zoom in
-map R rotate
+map ; feedkeys :
 
 # Open document in fit-width mode by default
 set adjust-open "best-fit"
@@ -16,7 +16,7 @@ set pages-per-row 1
 #stop at page boundries
 set scroll-page-aware "true"
 set scroll-full-overlap 0.01
-set scroll-step 60
+set scroll-step 30
 
 #zoom settings
 set zoom-max 10000

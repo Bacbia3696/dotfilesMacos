@@ -62,18 +62,13 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: MonoLisa Nerd Font
-    style: Book
-
+    style: Light
     # The bold font face
   bold:
-    family: MonoLisa Nerd Font
     style: Medium
-
     # The italic font face
   italic:
-    family: MonoLisa Nerd Font
-    style: Book Italic
-
+    style: Light Italic
     # Point size of the font
   size: 13.5
 
@@ -81,7 +76,7 @@ font:
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
     x: 0
-    y: 0
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increase the x offset to move the glyph to
@@ -107,7 +102,7 @@ mouse:
   triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: true
+  hide_when_typing: false
 
 hints:
   enabled:
@@ -212,13 +207,13 @@ shell:
 #     - { ... , command: { program: "alacritty", args: ["-e", "vttest"] } }
 key_bindings:
   # custom tmux keybindings
-  - { key: K, mods: Command, chars: "\x00\x6e" }
-  - { key: J, mods: Command, chars: "\x00\x70" }
-  - { key: T, mods: Command, chars: "\x00\x63" }
-  - { key: N, mods: Command, chars: "\x00\x54" } # open t - tmux smart session manager
-  - { key: L, mods: Command, chars: "\x00\x4c" }
-  - { key: Semicolon, mods: Command, chars: "\x00\x3a" }
-  - { key: W, mods: Command, chars: "\x00\x26" }
+  - { key: K, mods: Command, chars: "\0n" }
+  - { key: J, mods: Command, chars: "\0p" }
+  - { key: T, mods: Command, chars: "\0c" }
+  - { key: N, mods: Command, chars: "\0T" } # open t - tmux smart session manager
+  - { key: L, mods: Command, chars: "\0L" }
+  - { key: Semicolon, mods: Command, chars: "\0:" }
+  - { key: W, mods: Command, chars: "\0&" }
 
   # Command-S --> M-o == format and save
-  - { key: S, mods: Command, chars: "\x1b\x6f" }
+  - { key: S, mods: Command, chars: "\eo" }

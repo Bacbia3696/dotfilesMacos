@@ -23,21 +23,12 @@ return {
 	keys = keys,
 	adjust_window_size_when_changing_font_size = false,
 	font = wezterm.font_with_fallback({
-		"Operator Mono SSm Lig",
-		"SF Pro",
+		{ family = "Victor Mono", weight = "Medium" },
+		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
 		"Apple Color Emoji",
 	}),
 	bold_brightens_ansi_colors = true,
-	font_rules = {
-		{
-			intensity = "Half",
-			font = wezterm.font({ family = "Operator Mono SSm Lig", weight = 400 }),
-		},
-		{
-			intensity = "Bold",
-			font = wezterm.font({ family = "Operator Mono SSm Lig", weight = 400 }),
-		},
-	},
+	font_rules = {},
 	enable_scroll_bar = true,
 	min_scroll_bar_height = "2cell",
 	font_size = 14,
@@ -61,7 +52,7 @@ return {
 	window_background_opacity = 0.7,
 	tab_max_width = 50,
 	hide_tab_bar_if_only_one_tab = true,
-	disable_default_key_bindings = false,
+	disable_default_key_bindings = true,
 	default_cursor_style = "BlinkingBar",
 	colors = theme,
 	hyperlink_rules = {
