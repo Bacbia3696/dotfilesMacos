@@ -27,6 +27,7 @@ yabai -m rule --add label="Select file to save to" app="^Inkscape$" title="Selec
 yabai -m rule --add app="^Alacritty$" space=^1 opacity=1
 yabai -m rule --add app="^(Google Chrome|Safari)$" space=2
 yabai -m rule --add app="^(Slack|Telegram|Zalo)$" space=3
+yabai -m rule --add app="^Code$" space=5 opacity=0.85
 
 yabai -m rule --add label="Pdf 2" app="(Foxit PDF Reader|zathura)" space=^4 opacity=0.9
 # yabai -m rule --add app="^Qt Creator$" space 4

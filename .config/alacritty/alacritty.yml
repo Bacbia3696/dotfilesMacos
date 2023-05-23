@@ -3,7 +3,7 @@ import:
 
 colors:
   bright:
-    black: "0x747b9a"
+    black: "0x646b9a"
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -62,13 +62,13 @@ font:
   # The normal (roman) font face to use.
   normal:
     family: MonoLisa Nerd Font
-    style: Light
+    style: Book
     # The bold font face
   bold:
     style: Medium
     # The italic font face
   italic:
-    style: Light Italic
+    style: Book Italic
     # Point size of the font
   size: 14
 

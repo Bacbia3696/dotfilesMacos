@@ -24,7 +24,7 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	font = wezterm.font_with_fallback({
 		{ family = "MonoLisa", weight = "Medium" },
-		{ family = "Symbols Nerd Font Mono", scale = 0.75 },
+		-- { family = "Symbols Nerd Font Mono", scale = 0.75 },
 		"Apple Color Emoji",
 	}),
 	bold_brightens_ansi_colors = true,
