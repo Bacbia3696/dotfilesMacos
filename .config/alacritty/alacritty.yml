@@ -39,7 +39,7 @@ window:
   dynamic_title: true
 
   # Background opacity
-  opacity: 0.7
+  opacity: 0.8
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.

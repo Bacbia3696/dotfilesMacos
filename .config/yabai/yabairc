@@ -21,15 +21,16 @@ yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 yabai -m rule --add label="Select file to save to" app="^Inkscape$" title="Select file to save to" manage=off
 
-# yabai -m rule --add label="Picture in Picture" app="Google Chrome" title="Picture in Picture" sticky=on float=on border=on
-
 # Rules for specific apps to launch and be managed by yabai
 yabai -m rule --add app="^Alacritty$" space=^1 opacity=1
-yabai -m rule --add app="^(Google Chrome|Safari)$" space=2
+yabai -m rule --add app="^WezTerm$" space=^5 opacity=1
+# yabai -m rule --add app="^(Google Chrome|Safari)$" space=2
 yabai -m rule --add app="^(Slack|Telegram|Zalo)$" space=3
 yabai -m rule --add app="^Code$" space=5 opacity=0.85
 
 yabai -m rule --add label="Pdf 2" app="(Foxit PDF Reader|zathura)" space=^4 opacity=0.9
+yabai -m rule --add label="Picture in Picture" app="Google Chrome" title="Picture in Picture" opacity=0.4 sticky=on
+
 # yabai -m rule --add app="^Qt Creator$" space 4
 # yabai -m rule --add app="^Visual Studio Code$" space 4
 # yabai -m rule --add app="^Visual Studio$" space 4

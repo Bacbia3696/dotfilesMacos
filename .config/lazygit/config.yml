@@ -1,4 +1,13 @@
+gui:
+  showIcons: true
+  border: 'rounded'
 git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+os:
+  editCommand: 'nvim'
+  editCommandTemplate: '{{editor}} --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
+# promptToReturnFromSubprocess: false
+# quitOnTopLevelReturn: true
+# disableStartupPopups: true
