@@ -21,6 +21,10 @@ export FZF_DEFAULT_OPTS="--reverse --height 60% --cycle --border \
 # LESS
 export LESS='-SRXF'
 
+# EDITOR
+export VISUAL=nvim
+export EDITOR=$VISUAL
+
 # golang
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"

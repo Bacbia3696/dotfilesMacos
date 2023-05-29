@@ -8,6 +8,6 @@ git:
 os:
   editCommand: 'nvim'
   editCommandTemplate: '{{editor}} --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
-# promptToReturnFromSubprocess: false
-# quitOnTopLevelReturn: true
-# disableStartupPopups: true
+promptToReturnFromSubprocess: false
+quitOnTopLevelReturn: true
+disableStartupPopups: true
