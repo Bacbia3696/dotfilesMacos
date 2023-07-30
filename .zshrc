@@ -146,3 +146,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+[ -f "/Users/nguyenthanhdat/.ghcup/env" ] && source "/Users/nguyenthanhdat/.ghcup/env" # ghcup-env
+
+sh /opt/homebrew/opt/asdf/libexec/asdf.sh

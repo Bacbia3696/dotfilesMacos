@@ -59,17 +59,24 @@ scrolling:
 # Font configuration (changes require restart)
 
 font:
-  # The normal (roman) font face to use.
   normal:
-    family: MonoLisa Nerd Font
-    style: Book
-    # The bold font face
+    family: CaskaydiaCove Nerd Font
+    style: SemiLight
   bold:
-    style: Medium
-    # The italic font face
+    style: Regular
   italic:
-    style: Book Italic
-    # Point size of the font
+    style: SemiLight Italic
+  bold_italic:
+    style: SemiBold Italic
+
+  # normal:
+  #   family: MonoLisa Nerd Font
+  #   style: Light
+  # bold:
+  #   style: Book
+  # italic:
+  #   style: Book Italic
+
   size: 14
 
   # Offset is the extra space around each character. offset.y can be thought of
@@ -115,12 +122,6 @@ hints:
         mods: None
       binding:
         key: U
-        mods: Control|Shift
-    - regex: "[a-f0-9]{40}|[a-f0-9]{12}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
-      action: copy
-      post_processing: true
-      binding:
-        key: I
         mods: Control|Shift
 
 selection:
@@ -214,6 +215,17 @@ key_bindings:
   - { key: L, mods: Command, chars: "\0L" }
   - { key: Semicolon, mods: Command, chars: "\0:" }
   - { key: W, mods: Command, chars: "\0&" }
+  - { key: F, mods: Command, chars: "\0[" }
 
   # Command-S --> M-o == format and save
   - { key: S, mods: Command, chars: "\eo" }
+
+  - { key: Key1, mods: Command, chars: "\01" }
+  - { key: Key2, mods: Command, chars: "\02" }
+  - { key: Key3, mods: Command, chars: "\03" }
+  - { key: Key4, mods: Command, chars: "\04" }
+  - { key: Key5, mods: Command, chars: "\05" }
+  - { key: Key6, mods: Command, chars: "\06" }
+  - { key: Key7, mods: Command, chars: "\07" }
+  - { key: Key8, mods: Command, chars: "\08" }
+  - { key: Key9, mods: Command, chars: "\09" }

@@ -19,6 +19,9 @@
 	b = branch
 	ba = branch -a
 	c = commit
+	cf = config
+	cfl = config --local
+	root = rev-parse --show-toplevel
 	cam = commit -am
 	cfix = commit --amend
 	cl = clone
@@ -83,3 +86,5 @@
 	insteadOf = https://bitbucket.org/
 [commit]
 	gpgsign = true
+[push]
+	followTags = true

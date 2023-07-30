@@ -1,4 +1,4 @@
-export PROMPT_EOL_MARK=''
+export PROMPT_EOL_MARK='󰌑'
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # FZF
