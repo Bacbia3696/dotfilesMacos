@@ -9,3 +9,4 @@ go.work
 go.work.sum
 target/
 .nlsp-settings/
+.neoconf.json
